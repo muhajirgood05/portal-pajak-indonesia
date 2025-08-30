@@ -37,6 +37,15 @@ const articles = ref([
     date: '29 Juli 2025',
     description: 'Kewajiban dan tata cara pembuatan bukti potong PPh melalui platform e-Bupot Unifikasi.'
   }
+  ,
+  {
+    id: 5,
+    title: 'Panduan Subjek Pajak (SPDN / SPLN / BUT)',
+    slug: '/materi/panduan-subjek-pajak',
+    category: 'Panduan',
+    date: '30 Agustus 2025',
+    description: 'Ringkasan lengkap mengenai kriteria Subjek Pajak Dalam Negeri, Subjek Pajak Luar Negeri, dan Bentuk Usaha Tetap.'
+  }
 ]);
 
 // --- Search & Filters ---
@@ -78,8 +87,15 @@ function clearFilters() {
       <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-10 shadow-xl overflow-hidden">
         <div class="md:flex md:items-center md:justify-between gap-8">
           <div class="md:flex-1">
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-3">Pusat Pengetahuan Pajak</h1>
-            <p class="text-blue-100 max-w-2xl mb-6">Panduan, artikel, dan jawaban cepat untuk membantu Anda memahami perpajakan di Indonesia.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-1">Pusat Pengetahuan Pajak</h1>
+                  <p class="text-blue-100 max-w-2xl">Panduan, artikel, dan jawaban cepat untuk membantu Anda memahami perpajakan di Indonesia.</p>
+                </div>
+                <div class="hidden sm:flex items-center gap-3">
+                  <router-link to="/materi/panduan-subjek-pajak" class="text-sm font-medium bg-yellow-400 hover:bg-yellow-500 text-yellow-900 px-3 py-2 rounded-md">Panduan Subjek Pajak</router-link>
+                </div>
+              </div>
 
             <div class="relative max-w-2xl">
               <input
