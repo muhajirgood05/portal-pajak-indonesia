@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Override Ionic/Tailwind global rules that may lock scrolling.
+	 This ensures the page can scroll normally when content exceeds viewport. */
+html, body {
+	position: static !important;
+	width: 100% !important;
+	height: auto !important;
+	max-height: none !important;
+	overflow: auto !important;
+	-webkit-overflow-scrolling: touch !important;
+}
+
+/* Ensure Ion page elements participate in normal document flow */
+.ion-page {
+	position: relative !important;
+}
+
+/* Allow backdrop helpers to not permanently disable scroll */
+body.backdrop-no-scroll {
+	overflow: auto !important;
+}
